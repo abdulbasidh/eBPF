@@ -1,10 +1,8 @@
 ## eBPF with OpenAPI
 
-1. Install requirement.txt
-pip3 install -r requirements.txt
+1. Install requirement.txt using pip3 install -r requirements.txt
 
-2. Check whether the below mentioned modules are installed. If not install them using
-sudo apt get install <module name>
+2. Check whether the below mentioned modules are installed. If not install them using sudo apt get install <module name>
 
 Required Modules
 * libelf-dev
