@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Demo Python API Server
+  license:
+    name: GPLv3
+servers:
+  - url: /myprocess
+paths:
+  /:
+    get:
+      operationId: hello_world_get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+          '*/*': { }
+        x-body-name: body
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { }
+          description: A short JSON object.
+      summary: Accepts an arbitrary, or empty request body, and returns a short JSON document
+    summary: An API endpoint for returning and receiving large payloads.
+components: {}

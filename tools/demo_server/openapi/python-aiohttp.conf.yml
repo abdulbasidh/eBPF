@@ -1,0 +1,6 @@
+# See output of 'openapi-generator-cli config-help -g python-aiohttp' for more options
+# This is the python-aiohttp generator default
+defaultController: demo.server.handlers
+packageVersion: 0.1.0
+# This is the python-aiohttp generator default
+serverPort: 4040
