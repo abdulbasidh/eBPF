@@ -1,26 +1,3 @@
-#!/bin/bash -e
-
-#  Copyright (C) 2021 Levo Inc.
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program; if not, write to the Free Software Foundation,
-#  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
-
-# run.sh
-#
-# Build and run eBPF demo API server and socket payload capture application.
-
-# Require root
 if [[ "$(id -u)" -ne 0 ]]; then
   >&2 echo "NOTE: Most eBPF programs cannot be loaded into the kernel by un-privileged
 users. Please re-run this script as root.
@@ -68,6 +45,7 @@ echo "*** Creating Python virtual environment for demo API server ***"
 cp -a "$PROJECT_DIR/tools/demo_server" "$BUILD_DIR"
 python3 -m venv "$DEMO_SERVER_DIR/venv"
 source "$DEMO_SERVER_DIR/venv/bin/activate"
+
 # Install python dependencies for demo_server in the newly created virtualenv
 pip3 install -r "$DEMO_SERVER_DIR/requirements.txt"
 
